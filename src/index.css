@@ -1,32 +1,4 @@
-:root {
-    --accent-pink: #E5139E;
-    --accent-pink-darker: #961A6F;
-    --accent-pink-shadow: 0px 2px 10px rgba(255, 0, 168, 0.4);
-
-    --purple: #1F1D36;
-    --purple-lighter: #2C2441;
-
-    --dark-purple: #181626;
-
-    --light-pink: #FFEDF9;
-    --light-pink-darker: #FFE4F6;
-    --light-pink-shadow: 0px 2px 10px rgba(255, 220, 243, 0.2);
-}
-
 body {
     margin: 0;
     font-family: 'Noto Sans', sans-serif;
-    background-color: linear-gradient(var(--background-gradient));
-}
-
-.has-purple-gradient-bg {
-    background: linear-gradient(116.55deg, var(--background-color) 0%, var(--background-color-lighter) 100.81%);
-}
-
-.has-accent-pink-gradient-bg {
-    background: linear-gradient(80.91deg, var(--accent-pink) 0.01%, var(--accent-pink-darker) 82.75%);
-}
-
-.has-light-pink-gradient-bg {
-    background: linear-gradient(89.71deg, var(--light-pink) 2.6%, var(--light-pink-darker) 100%);
 }

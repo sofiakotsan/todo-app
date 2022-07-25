@@ -5,7 +5,7 @@ import TodoList from './components/TodoList/TodoList';
 
 function App() {
 	return (
-		<div className="todo-app">
+		<div className="todo-app has-purple-gradient-bg">
 			<TodoForm/>
 			<TodoList/>
 		</div>
