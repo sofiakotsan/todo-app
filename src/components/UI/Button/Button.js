@@ -1,8 +1,11 @@
 import React from "react";
 
-const Button = ({children, ...props}) => {
+const Button = ({children, style, ...props}) => {
+    let  buttonStyle = style ? 'button--' + style : 'button--filled';
     return (
-        <button>{children}</button>
+        <button className={`button ${buttonStyle}`}>
+            {children}
+        </button>
     );
 }
 

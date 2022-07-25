@@ -11,6 +11,8 @@
     --light-pink: #FFEDF9;
     --light-pink-darker: #FFE4F6;
     --light-pink-shadow: 0px 2px 10px rgba(255, 220, 243, 0.2);
+
+    --border-radius: 10px;
 }
 
 .has-purple-gradient-bg {
@@ -23,4 +25,8 @@
 
 .has-light-pink-gradient-bg {
     background: linear-gradient(89.71deg, var(--light-pink) 2.6%, var(--light-pink-darker) 100%);
+}
+
+.todo-app {
+    height: 100%;
 }
