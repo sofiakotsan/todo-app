@@ -31,3 +31,19 @@
 .todo-app {
     height: 100%;
 }
+
+.container {
+    width: 100%;
+    max-width: 740px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.h1 {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 60px;
+}
