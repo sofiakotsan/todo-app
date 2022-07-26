@@ -1,10 +1,9 @@
 .button {
-    margin: 0;
-    padding: 13px 23px;
+    padding: var(--vertical-padding) 23px;
     border-radius: var(--border-radius);
     outline: none;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: var(--transition);
     font-weight: 500;
     font-size: 17px;
     line-height: 23px;
@@ -58,7 +57,7 @@
     background: transparent;
     color: var(--accent-pink);
     border-color: var(--accent-pink);
-    padding: 11px 23px;
+    padding: calc(var(--vertical-padding) - 2px) 23px;
 }
 
 .button--outline:hover {

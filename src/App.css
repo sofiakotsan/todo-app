@@ -2,7 +2,7 @@
     --accent-pink: #E5139E;
     --accent-pink-darker: #961A6F;
     --accent-pink-shadow: 0px 2px 10px rgba(255, 0, 168, 0.4);
-    --accent-pink-shadow-hover: 0px 2px 25px rgba(255, 0, 168, 0.4);
+    --accent-pink-shadow-hover: 0px 2px 20px rgba(255, 0, 168, 0.4);
 
     --purple: #1F1D36;
     --purple-lighter: #2C2441;
@@ -14,6 +14,14 @@
     --light-pink-shadow: 0px 2px 10px rgba(255, 220, 243, 0.2);
 
     --border-radius: 10px;
+    --vertical-padding: 14px;
+    --transition: 0.3s ease;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .has-purple-gradient-bg {
@@ -30,6 +38,8 @@
 
 .todo-app {
     height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .container {
