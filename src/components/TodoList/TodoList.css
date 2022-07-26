@@ -1,0 +1,13 @@
+.todo-list {
+    width: 100%;
+    padding: 30px;
+    background: var(--dark-purple);
+    border-radius: var(--border-radius);
+    margin-top: 30px;
+    height: 45vh;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+}

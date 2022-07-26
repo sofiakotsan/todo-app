@@ -9,6 +9,7 @@ function App() {
 			<div className='container'>
 				<h1 className='h1'>You currently have: 4 tasks</h1>
 				<TodoForm/>
+				<TodoList/>
 			</div>
 		</div>
 	);

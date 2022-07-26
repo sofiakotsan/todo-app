@@ -1,8 +1,11 @@
 import React from "react";
+import "./TodoList.css"
 
 const TodoList = () => {
     return (
-        <div></div>
+        <div className="todo-list">
+
+        </div>
     );
 }
 
