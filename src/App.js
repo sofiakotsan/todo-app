@@ -8,6 +8,7 @@ function App() {
 		<div className='todo-app has-purple-gradient-bg'>
 			<div className='container'>
 				<h1 className='h1'>You currently have: 4 tasks</h1>
+				<TodoForm/>
 			</div>
 		</div>
 	);

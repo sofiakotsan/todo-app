@@ -6,6 +6,7 @@ const TodoForm = () => {
     return (
         <div>
             <Input placeholder="What do you want to do?"/>
+            <Button>Add Task</Button>
         </div>
     );
 }
