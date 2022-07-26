@@ -5,6 +5,7 @@ const TodoForm = () => {
     return (
         <div>
             <Button>test</Button>
+            <Button style="outline">test</Button>
         </div>
     );
 }
