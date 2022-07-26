@@ -11,7 +11,6 @@
 }
 
 .button--filled {
-    /* background: linear-gradient(80.91deg, var(--accent-pink) 0.01%, var(--accent-pink-darker) 82.75%); */
     background: transparent;
     color: #fff;
     border: none;
