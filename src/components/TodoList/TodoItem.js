@@ -12,8 +12,8 @@ const TodoItem = ({item, ...props}) => {
                 </span>
             </div>
             <div className="todo-item-controls">
-                <button className="edit-btn"><EditIcon/></button>
-                <button className="delete-btn"><DeleteIcon/></button>
+                <button className="todo-item-btn edit-btn"><EditIcon/></button>
+                <button className="todo-item-btn delete-btn"><DeleteIcon/></button>
             </div>
         </div>
     );

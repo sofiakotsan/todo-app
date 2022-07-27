@@ -11,3 +11,49 @@
     gap: 15px;
     overflow-y: auto;
 }
+
+.todo-item {
+    padding: 13px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(89.71deg, var(--light-pink) 2.6%, var(--light-pink-darker) 100%);
+    border-radius: var(--border-radius);
+    color: var(--dark-purple);
+    transition: var(--transition);
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.todo-item:hover {
+    /* background: linear-gradient(89.71deg, var(--light-pink-darker) 2.6%, var(--light-pink) 100%); */
+    color: var(--accent-pink);
+}
+
+.todo-item-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.todo-item-btn {
+    height: 19px;
+    width: 19px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.todo-item-btn svg path {
+    fill: var(--purple);
+    transition: var(--transition);
+}
+
+.todo-item-btn:hover svg path {
+    fill: var(--accent-pink);
+}
