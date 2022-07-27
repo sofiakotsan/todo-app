@@ -2,14 +2,16 @@ import React from "react";
 import TodoItem from "./TodoItem";
 import "./TodoList.css"
 
-const TodoList = () => {
-    let item={
-        id: 1,
-        text: 'Task 1',
-    }
+const TodoList = ({items, ...props}) => {
     return (
-        <div className="todo-list">
-            <TodoItem item={item}/>
+        <div className="todo-list-wrap">
+            <div className="todo-list">
+                {
+                    items.map(item => {
+                        return <TodoItem item={item}/>
+                    })
+                }
+            </div>
         </div>
     );
 }
