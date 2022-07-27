@@ -3,7 +3,7 @@ import "./TodoList.css";
 import { ReactComponent as EditIcon } from "./img/edit.svg";
 import { ReactComponent as DeleteIcon } from "./img/delete.svg";
 
-const TodoItem = ({item, ...props}) => {
+const TodoItem = ({item, deleteItem, ...props}) => {
     return (
         <div className="todo-item">
             <div className="todo-item-info">
@@ -13,7 +13,11 @@ const TodoItem = ({item, ...props}) => {
             </div>
             <div className="todo-item-controls">
                 <button className="todo-item-btn edit-btn"><EditIcon/></button>
-                <button className="todo-item-btn delete-btn"><DeleteIcon/></button>
+                        
+                <button className="todo-item-btn delete-btn"
+                        onClick={() => { deleteItem(item.id); }}>
+                            <DeleteIcon/>
+                </button>
             </div>
         </div>
     );
