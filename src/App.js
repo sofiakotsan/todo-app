@@ -22,12 +22,21 @@ function App() {
 		setTodos(todos.filter(item => item.id != itemId));
 	}
 
+	const toggleIsFinished = (itemId) => {
+		setTodos(todos.map(item => {
+			if(item.id == itemId) item.isFinished = !item.isFinished;
+			return item;
+		}));
+	}
+
 	return (
 		<div className='todo-app has-purple-gradient-bg'>
 			<div className='container'>
 				<h1 className='h1'>You currently have: 4 tasks</h1>
 				<TodoForm/>
-				<TodoList items={todos} deleteItem={deleteItem}/>
+				<TodoList 	items={todos} 
+							deleteItem={deleteItem} 
+							toggleIsFinished={toggleIsFinished}/>
 			</div>
 		</div>
 	);

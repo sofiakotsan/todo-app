@@ -3,10 +3,10 @@ import "./TodoList.css";
 import { ReactComponent as EditIcon } from "./img/edit.svg";
 import { ReactComponent as DeleteIcon } from "./img/delete.svg";
 
-const TodoItem = ({item, deleteItem, ...props}) => {
+const TodoItem = ({item, deleteItem, toggleIsFinished, ...props}) => {
     let todoClassName = 'todo-item' + (item.isFinished ? ' todo-item--finished' : '');
     return (
-        <div className={todoClassName}>
+        <div className={todoClassName} onClick={() => { toggleIsFinished(item.id) }}>
             <div className="todo-item-info">
                 <span className="todo-item-text">
                     {item.text}
