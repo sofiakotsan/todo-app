@@ -16,10 +16,19 @@ function App() {
 		{ id: 9, text: 'Task 9', isFinished: false },
 	];
 
+	const getActiveTodosCount = (todos) => {
+		let count = 0;
+		for(let item of todos)
+			if (!item.isFinished) ++count;
+		return count;
+	}
+
 	const [todos, setTodos] = useState(items);
+	const [activeTodos, setActiveTodos] = useState(getActiveTodosCount(todos));
 
 	const deleteItem = (itemId) => {
 		setTodos(todos.filter(item => item.id != itemId));
+		setActiveTodos(getActiveTodosCount(todos));
 	}
 
 	const toggleIsFinished = (itemId) => {
@@ -27,12 +36,13 @@ function App() {
 			if(item.id == itemId) item.isFinished = !item.isFinished;
 			return item;
 		}));
+		setActiveTodos(getActiveTodosCount(todos));
 	}
 
 	return (
 		<div className='todo-app has-purple-gradient-bg'>
 			<div className='container'>
-				<h1 className='h1'>You currently have: 4 tasks</h1>
+				<h1 className='h1'>You currently have: {activeTodos} tasks</h1>
 				<TodoForm/>
 				<TodoList 	items={todos} 
 							deleteItem={deleteItem} 

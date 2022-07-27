@@ -17,6 +17,7 @@
     color: rgba(255, 255, 255, 0.8);
 }
 
-.input:hover {
+.input:hover,
+.input:focus {
     box-shadow: var(--accent-pink-shadow-hover);
 }
