@@ -4,8 +4,9 @@ import { ReactComponent as EditIcon } from "./img/edit.svg";
 import { ReactComponent as DeleteIcon } from "./img/delete.svg";
 
 const TodoItem = ({item, deleteItem, ...props}) => {
+    let todoClassName = 'todo-item' + (item.isFinished ? ' todo-item--finished' : '');
     return (
-        <div className="todo-item">
+        <div className={todoClassName}>
             <div className="todo-item-info">
                 <span className="todo-item-text">
                     {item.text}
