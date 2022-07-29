@@ -51,6 +51,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
     background: linear-gradient(89.71deg, var(--light-pink) 2.6%, var(--light-pink-darker) 100%);
     border-radius: var(--border-radius);
     color: var(--dark-purple);
@@ -60,6 +61,7 @@
     font-size: 16px;
     line-height: 22px;
     box-shadow: var(--light-pink-shadow);
+    word-break: break-word;
 }
 
 .todo-item:hover {

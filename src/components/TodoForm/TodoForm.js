@@ -15,10 +15,10 @@ const TodoForm = ({addTodo, ...props}) => {
     return (
         <div className="todo-form-wrap">
             <form action="#" className="todo-form" onSubmit={submitForm}>
-                <Input  name="text" type="text" minlength="1" maxlength="200"
+                <Input  name="text" type="text" minlength="1" maxlength="150"
                         placeholder="What do you want to do?"
                         value={inputValue} onChange={(e) => {setInputValue(e.target.value)}}/>
-                        
+
                 <Button type="submit" disabled={!inputValue.trim().length} >Add Task</Button>
             </form>
         </div>
