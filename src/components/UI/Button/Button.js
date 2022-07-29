@@ -1,8 +1,8 @@
 import React from "react";
 import './Button.css';
 
-const Button = ({children, style, ...props}) => {
-    let  buttonStyle = style ? 'button--' + style : 'button--filled';
+const Button = ({children, btnStyle, ...props}) => {
+    let  buttonStyle = btnStyle ? 'button--' + btnStyle : 'button--filled';
     return (
         <button className={`button ${buttonStyle}`} {...props}>
             <span>
