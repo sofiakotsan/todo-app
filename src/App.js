@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import TodoForm from './components/TodoForm/TodoForm';
 import TodoList from './components/TodoList/TodoList';
 
-function App() {
+function App() {	
 	let items = [
 		{ id: 1, text: 'Task 1', isFinished: true },
 		{ id: 2, text: 'Task 2', isFinished: false },
@@ -16,6 +16,8 @@ function App() {
 		{ id: 9, text: 'Task 9', isFinished: false },
 	];
 
+	// let lastTodoId = 9;
+
 	const getActiveTodosCount = (todos) => {
 		let count = 0;
 		for(let item of todos)
@@ -25,6 +27,8 @@ function App() {
 
 	const [todos, setTodos] = useState(items);
 	const [activeTodos, setActiveTodos] = useState(getActiveTodosCount(todos));
+
+	const lastTodoId = useRef(10);
 
 	useEffect(() => {
 		setActiveTodos(getActiveTodosCount(todos));
@@ -50,13 +54,23 @@ function App() {
 		setTodos([]);
 	}
 
+	const addTodo = (todoText) => {
+		todoText = todoText.trim();
+		if(!todoText)
+			return;
+
+		console.log(lastTodoId.current);
+		let newTodo = { id: ++lastTodoId.current, text: todoText }
+		setTodos([newTodo, ...todos]);
+	}
+
 	return (
 		<div className='todo-app has-purple-gradient-bg'>
 			<div className='container'>
 				<h1 className='h1'>
 					You currently have: {activeTodos} {activeTodos % 10 == 1 && activeTodos != 11 ? 'task' : 'tasks'}
 				</h1>
-				<TodoForm/>
+				<TodoForm addTodo={addTodo}/>
 				<TodoList 	items={todos} 
 							deleteItem={deleteItem} 
 							toggleIsFinished={toggleIsFinished}
