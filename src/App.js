@@ -44,6 +44,11 @@ function App() {
 			if(!item.isFinished) toggleIsFinished(item.id);
 	}
 
+	const deleteAll = () => {
+		setTodos([]);
+		setActiveTodos(getActiveTodosCount([]));
+	}
+
 	return (
 		<div className='todo-app has-purple-gradient-bg'>
 			<div className='container'>
@@ -55,7 +60,8 @@ function App() {
 							deleteItem={deleteItem} 
 							toggleIsFinished={toggleIsFinished}
 							finishAll={finishAll}
-							activeTodos={activeTodos}/>
+							activeTodos={activeTodos}
+							deleteAll={deleteAll}/>
 			</div>
 		</div>
 	);

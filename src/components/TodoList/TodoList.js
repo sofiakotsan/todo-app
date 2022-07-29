@@ -3,7 +3,7 @@ import TodoItem from "./TodoItem";
 import Button from "./../UI/Button/Button";
 import "./TodoList.css"
 
-const TodoList = ({items, deleteItem, toggleIsFinished, finishAll, activeTodos, ...props}) => {
+const TodoList = ({items, deleteItem, toggleIsFinished, finishAll, deleteAll, activeTodos, ...props}) => {
     return (
         <div className="todo-list-wrap">
             <div className="todo-list">
@@ -19,8 +19,8 @@ const TodoList = ({items, deleteItem, toggleIsFinished, finishAll, activeTodos, 
                 </div>
             </div>
             <div className="todo-list-controls">
-                <Button onClick={() => {finishAll()}} disabled={activeTodos === 0}>Finish All</Button>
-                <Button btnStyle="outline" disabled={items.lenght > 0}>Clear</Button>
+                <Button onClick={finishAll} disabled={!activeTodos}>Finish All</Button>
+                <Button onClick={deleteAll} btnStyle="outline" disabled={items.length === 0}>Clear</Button>
             </div>
             
         </div>
