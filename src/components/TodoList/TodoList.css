@@ -1,15 +1,18 @@
 .todo-list-wrap {
+    margin-top: 30px;
+}
+
+.todo-list {
     width: 100%;
     padding: 30px;
     padding-right: 20px;
     background: var(--dark-purple);
     border-radius: var(--border-radius);
-    margin-top: 30px;
     height: 45vh;
     max-height: 400px;
 }
 
-.todo-list {
+.todo-list-inner {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -18,19 +21,19 @@
 }
 
 /* width */
-.todo-list::-webkit-scrollbar {
+.todo-list-inner::-webkit-scrollbar {
     width: 10px;
     margin-left: 20px;
 }
 
 /* Track */
-.todo-list::-webkit-scrollbar-track {
+.todo-list-inner::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.3);
     border-radius: 5px;
 }
 
 /* Handle */
-.todo-list::-webkit-scrollbar-thumb {
+.todo-list-inner::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.3);
     border-radius: 5px;
     cursor: pointer;
@@ -38,7 +41,7 @@
 }
 
 /* Handle on hover */
-.todo-list::-webkit-scrollbar-thumb:hover {
+.todo-list-inner::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.7);
 }
 
@@ -97,4 +100,8 @@
 
 .todo-item-btn:hover svg path {
     fill: var(--accent-pink);
+}
+
+.todo-list-controls {
+    
 }
