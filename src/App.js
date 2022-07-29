@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import TodoForm from './components/TodoForm/TodoForm';
 import TodoList from './components/TodoList/TodoList';
@@ -26,9 +26,12 @@ function App() {
 	const [todos, setTodos] = useState(items);
 	const [activeTodos, setActiveTodos] = useState(getActiveTodosCount(todos));
 
+	useEffect(() => {
+		setActiveTodos(getActiveTodosCount(todos));
+	}, [todos]);
+
 	const deleteItem = (itemId) => {
 		setTodos(todos.filter(item => item.id != itemId));
-		setActiveTodos(getActiveTodosCount(todos));
 	}
 
 	const toggleIsFinished = (itemId) => {
@@ -36,7 +39,6 @@ function App() {
 			if(item.id == itemId) item.isFinished = !item.isFinished;
 			return item;
 		}));
-		setActiveTodos(getActiveTodosCount(todos));
 	}
 
 	const finishAll = () => {
@@ -46,7 +48,6 @@ function App() {
 
 	const deleteAll = () => {
 		setTodos([]);
-		setActiveTodos(getActiveTodosCount([]));
 	}
 
 	return (

@@ -16,7 +16,9 @@ const TodoItem = ({item, deleteItem, toggleIsFinished, ...props}) => {
                 <button className="todo-item-btn edit-btn"><EditIcon/></button>
                         
                 <button className="todo-item-btn delete-btn"
-                        onClick={() => { deleteItem(item.id); }}>
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            deleteItem(item.id); }}>
                             <DeleteIcon/>
                 </button>
             </div>
