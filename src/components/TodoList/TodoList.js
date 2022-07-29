@@ -20,7 +20,7 @@ const TodoList = ({items, deleteItem, toggleIsFinished, finishAll, activeTodos, 
             </div>
             <div className="todo-list-controls">
                 <Button onClick={() => {finishAll()}} disabled={activeTodos === 0}>Finish All</Button>
-                <Button btnStyle="outline" disabled={activeTodos === 0}>Clear</Button>
+                <Button btnStyle="outline" disabled={items.lenght > 0}>Clear</Button>
             </div>
             
         </div>
