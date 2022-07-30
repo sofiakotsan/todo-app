@@ -3,7 +3,9 @@ import TodoItem from "./TodoItem";
 import Button from "./../UI/Button/Button";
 import "./TodoList.css"
 
-const TodoList = ({items, deleteItem, toggleIsFinished, finishAll, deleteAll, activeTodos, ...props}) => {
+const TodoList = ({items, deleteItem, toggleIsFinished, 
+                    finishAll, deleteAll, activeTodos,
+                    editingTodo, setEditingTodo, updateTodo, ...props}) => {
     return (
         <div className="todo-list-wrap">
             <div className="todo-list">
@@ -13,7 +15,10 @@ const TodoList = ({items, deleteItem, toggleIsFinished, finishAll, deleteAll, ac
                             return  <TodoItem   item={item} 
                                                 key={item.id} 
                                                 deleteItem={deleteItem} 
-                                                toggleIsFinished={toggleIsFinished}/>
+                                                toggleIsFinished={toggleIsFinished}
+                                                editingTodo={editingTodo}
+                                                setEditingTodo={setEditingTodo}
+                                                updateTodo={updateTodo}/>
                         })
                     }
                 </div>

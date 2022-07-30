@@ -14,7 +14,7 @@ const TodoForm = ({addTodo, ...props}) => {
 
     return (
         <div className="todo-form-wrap">
-            <form action="#" className="todo-form" onSubmit={submitForm}>
+            <form method="post" className="todo-form" onSubmit={submitForm}>
                 <Input  name="text" type="text" minlength="1" maxlength="150"
                         placeholder="What do you want to do?"
                         value={inputValue} onChange={(e) => {setInputValue(e.target.value)}}/>

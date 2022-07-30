@@ -27,6 +27,7 @@ function App() {
 
 	const [todos, setTodos] = useState(items);
 	const [activeTodos, setActiveTodos] = useState(getActiveTodosCount(todos));
+	const [editingTodo, setEditingTodo] = useState(null);
 
 	const lastTodoId = useRef(10);
 
@@ -54,14 +55,21 @@ function App() {
 		setTodos([]);
 	}
 
-	const addTodo = (todoText) => {
-		todoText = todoText.trim();
-		if(!todoText)
+	const addTodo = (text) => {
+		text = text.trim();
+		if(!text)
 			return;
 
 		console.log(lastTodoId.current);
-		let newTodo = { id: ++lastTodoId.current, text: todoText }
+		let newTodo = { id: ++lastTodoId.current, text: text }
 		setTodos([newTodo, ...todos]);
+	}
+
+	const updateTodo = (id, text) => {
+		setTodos(todos.map((item) => {
+			if(item.id == id) item.text = text
+			return item;
+		}));
 	}
 
 	return (
@@ -76,7 +84,10 @@ function App() {
 							toggleIsFinished={toggleIsFinished}
 							finishAll={finishAll}
 							activeTodos={activeTodos}
-							deleteAll={deleteAll}/>
+							deleteAll={deleteAll}
+							editingTodo={editingTodo}
+							setEditingTodo={setEditingTodo}
+							updateTodo={updateTodo}/>
 			</div>
 		</div>
 	);
