@@ -51,7 +51,7 @@ const TodoItem = ({item, deleteItem, toggleIsFinished, editingTodo, setEditingTo
                     ? 
                     <form method="post" className="todo-edit-form" 
                         onClick={(e) => {e.stopPropagation()}} onSubmit={(e) => { e.preventDefault(); onTodoUpdate(e); }}>
-                        <input className="todo-edit-input" type="text" name="task_text" minlength="1" maxlength="150"
+                        <input className="todo-edit-input" type="text" name="task_text" minLength="1" maxLength="150"
                         value={newTodoText} onChange={onTextChange}/>
                     </form>
 

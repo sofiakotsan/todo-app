@@ -21,3 +21,9 @@
 .input:focus {
     box-shadow: var(--accent-pink-shadow-hover);
 }
+
+@media screen and (max-width: 552px) {
+    .input {
+        font-size: 14px;
+    }
+}

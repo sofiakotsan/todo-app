@@ -4,7 +4,7 @@
 }
 
 .todo-form .input {
-    flex-basis: 100%;
+    width: 100%;
 }
 
 .todo-form .button {

@@ -64,7 +64,7 @@ function App() {
 		<div className='todo-app has-purple-gradient-bg'>
 			<div className='container'>
 				<h1 className='h1'>
-					You currently have: {activeTodos} {activeTodos % 10 == 1 && activeTodos != 11 ? 'task' : 'tasks'}
+					You currently have: <span className='title-task-count'>{activeTodos} {activeTodos % 10 == 1 && activeTodos != 11 ? 'task' : 'tasks'}</span>
 				</h1>
 				<TodoForm addTodo={addTodo}/>
 				<TodoList 	items={todos} 

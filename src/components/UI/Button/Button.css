@@ -70,3 +70,10 @@
     background: var(--accent-pink);
     color: #fff;
 }
+
+@media screen and (max-width: 552px) {
+    .button {
+        font-size: 14px;
+        padding: var(--vertical-padding) 20px;
+    }
+}

@@ -57,3 +57,23 @@
     color: #fff;
     margin-bottom: 60px;
 }
+
+.title-task-count {
+    white-space: nowrap;
+}
+
+@media screen and (max-height: 768px) {
+    .h1 {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 552px) {
+    :root {
+        --vertical-padding: 11px;
+    }
+
+    .h1 {
+        font-size: 24px;
+    }
+}
